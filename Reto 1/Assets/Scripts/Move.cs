@@ -6,6 +6,15 @@ public class Move : MonoBehaviour
 {
     public float speed = 5f;
     public float rotationSpeed = 20f;
+
+    private Rigidbody2D rb;
+
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
